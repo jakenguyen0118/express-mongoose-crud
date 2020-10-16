@@ -18,6 +18,9 @@ app.get('/', (req, res) => {
 const fruitsController = require('./controllers/fruits.js')
 app.use('/fruits', fruitsController)
 
+const ownerController = require('./controllers/owner')
+app.use('/owner', ownerController)
+
 app.listen(PORT, () => {
     console.log(`listening in on port: ${PORT}`)
 })
